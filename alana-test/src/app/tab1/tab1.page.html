@@ -1,0 +1,69 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      Response Question #2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-header class="content-tittle">
+      <ion-toolbar>
+        <ion-text>
+            <p style="text-align: center;">Interval Values:</p>
+        </ion-text>
+      </ion-toolbar>
+    </ion-header>
+  <ion-item>
+    <ion-label color="primary">Initial Value</ion-label>
+    <ion-input [(ngModel)]="minValue" type="number" placeholder="Number Input with no label"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">Final Value</ion-label>
+    <ion-input [(ngModel)]="maxValue" type="number" placeholder="Number Input with no label"></ion-input>
+  </ion-item>  
+</ion-card>
+
+<ion-card>
+    <ion-card>
+      <ion-toolbar (click)="changeClass($event, 1)">
+          <ion-text>
+            <p>Final Result</p>
+          </ion-text>
+          <div (click)="changeClass($event, 1)" >
+              <div [className]="statusCardTotal  ? 'open-cards' : 'close-cards' ">
+
+                <p><b>Total:</b> {{finalTotale}}</p>     
+                
+              </div>
+          </div>
+        </ion-toolbar>
+      </ion-card>
+      <ion-card>
+      <ion-toolbar (click)="changeClass($event, 2)">
+          <ion-text>
+            <p>Details</p>
+          </ion-text>
+          <div>
+              <div [className]="statusCardDetail ? 'open-cards' : 'close-cards' "  >
+                  <ion-text *ngFor="let item of detailResult; let i = index">
+                      <div>
+                        <ion-label><b>Value Step</b>:{{intervalResult[i]}} | <b>Array key</b>: {{i}} | <b>Result</b>: {{item}}</ion-label>
+                      </div>                      
+                 </ion-text>
+              </div>
+          </div>
+        </ion-toolbar>
+      </ion-card>
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+              <ion-button color="success" expand="full" (click)="calcTotale($event)">Calculate!</ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button color="danger" expand="full" (click)="cleanVars()">Clean!</ion-button>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-card>

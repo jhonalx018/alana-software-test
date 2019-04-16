@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Promises
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card class="card-default-padding">
+    <ion-text>
+      <p><b>Summary</b></p>
+      <p>This method is only allowed for GET request</p>
+      
+      <p><b>Example:</b> </p>
+      <ion-text color="danger"><p>https://jsonplaceholder.typicode.com/comments</p></ion-text>
+
+    </ion-text>
+    <ion-label color="primary">PUT YOU URL HERE</ion-label>
+    <ion-input [(ngModel)]="urlTest" type="url" placeholder="https:"></ion-input>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+              <ion-button color="success" expand="full" (click)="getData($event)">GOU!</ion-button>
+            </ion-col> 
+            <ion-col>
+                <ion-button color="danger" expand="full" (click)="cleanVars()">Clean!</ion-button>
+            </ion-col>    
+        </ion-row>
+      </ion-grid>
+</ion-card>
+
+<ion-card class="card-default-padding" *ngIf="result != null">
+
+    <p><b>Result:</b></p>
+    <p>{{ result | json }}</p>
+
+</ion-card>

@@ -1,0 +1,23 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.ion-page {
+  display: block;
+  overflow: auto !important;
+  background: #3171e02b;
+}
+
+.close-cards {
+  height: 0;
+  display: none;
+  transition: 2s;
+}
+
+.open-cards {
+  height: auto;
+  display: inline-block;
+  max-height: 19vh;
+  overflow: auto;
+  width: 100%;
+}
