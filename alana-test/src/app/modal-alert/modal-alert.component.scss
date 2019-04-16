@@ -1,0 +1,25 @@
+app-modal-alert.ion-page {
+    height: 90%;    
+    margin-top: 10%;
+}
+
+
+.modal-wrapper.modal-wrapper-ios.sc-ion-modal-ios {
+    background: transparent;
+}
+
+app-modal-alert.ion-page {
+    background: white;
+}
+
+ion-icon.modal-close-icon.hydrated {
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-bottom: 10px;
+}
+
+ion-text.default-tittle.hydrated {
+    margin: 0 auto;
+    font-weight: 700;
+}
