@@ -21,3 +21,19 @@
   overflow: auto;
   width: 100%;
 }
+
+ion-text.header-name.hydrated {
+  background: #72dd5f7a;
+  display: inline-block;
+  width: 100%;
+  border-radius: 5px;
+  padding-left: 20px;
+  color: #eb4841;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card-content-result {
+  background: white;
+}

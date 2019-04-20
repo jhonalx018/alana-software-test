@@ -15,7 +15,6 @@ import * as MappedName from '../helpers/MapName.json';
 
 @Injectable()
 export class Tab1Page {
-  
 
   
   statusCardTotal:boolean = false;
@@ -55,7 +54,7 @@ export class Tab1Page {
       
     }
     
-    this.statusCardTotal = true;
+    this.statusCardTotal = true, this.statusCardDetail = true;
   }
 
   /*
@@ -92,7 +91,6 @@ export class Tab1Page {
 
   private changeClass($event, card:any):void{
     
-    console.log(this.statusCardTotal);
     if(card == 1){
       this.statusCardTotal = !this.statusCardTotal;
     } else {

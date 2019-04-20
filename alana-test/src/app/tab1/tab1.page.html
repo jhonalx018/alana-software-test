@@ -17,18 +17,18 @@
     </ion-header>
   <ion-item>
     <ion-label color="primary">Initial Value</ion-label>
-    <ion-input [(ngModel)]="minValue" type="number" placeholder="Number Input with no label"></ion-input>
+    <ion-input [(ngModel)]="minValue" type="number" placeholder="Numbers"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label color="primary">Final Value</ion-label>
-    <ion-input [(ngModel)]="maxValue" type="number" placeholder="Number Input with no label"></ion-input>
+    <ion-input [(ngModel)]="maxValue" type="number" placeholder="Numbers"></ion-input>
   </ion-item>  
 </ion-card>
 
-<ion-card>
+<ion-card class="card-content-result">
     <ion-card>
       <ion-toolbar (click)="changeClass($event, 1)">
-          <ion-text>
+          <ion-text class="header-name">
             <p>Final Result</p>
           </ion-text>
           <div (click)="changeClass($event, 1)" >
@@ -42,14 +42,14 @@
       </ion-card>
       <ion-card>
       <ion-toolbar (click)="changeClass($event, 2)">
-          <ion-text>
+          <ion-text class="header-name">
             <p>Details</p>
           </ion-text>
           <div>
               <div [className]="statusCardDetail ? 'open-cards' : 'close-cards' "  >
                   <ion-text *ngFor="let item of detailResult; let i = index">
                       <div>
-                        <ion-label><b>Value Step</b>:{{intervalResult[i]}} | <b>Array key</b>: {{i}} | <b>Result</b>: {{item}}</ion-label>
+                        <p><ion-label><b>Value Step</b>:{{intervalResult[i]}} | <b>Array key</b>: {{i}} | <b>Result</b>: {{item}}</ion-label></p>
                       </div>                      
                  </ion-text>
               </div>
