@@ -104,8 +104,8 @@ export class Tab1Page {
     this.statusCardDetail = false;
 
     if(!param){    
-      this.minValue=null;
-      this.maxValue=null;  
+      this.minValue=0;
+      this.maxValue=0;       
     }
     this.intervalResult = [];
     this.finalTotale=0;
